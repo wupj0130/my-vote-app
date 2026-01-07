@@ -121,4 +121,5 @@ with tab1:
                     # 如果原本不是這支，就加入新的保送
                     if not is_this_g:
                         st.session_state.all_records.append({'voter':current_user, 'video_id':row['id'], 'type':'guarantee'})
+
                     st.rerun()
