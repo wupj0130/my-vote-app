@@ -8,7 +8,7 @@ st.set_page_config(page_title="2026 影片決選投票系統", layout="wide")
 # ---------------------------------------------------------
 # 【核心設定：請在此貼上您的 Google 試算表網址】
 # ---------------------------------------------------------
-SHEET_URL = "您的_GOOGLE_試算表網址" 
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1FmxeSiHJYG7gvAMJeKYoBM0IUS7DCZorJ6h1In0LH44/edit?usp=sharing" 
 
 # 建立雲端連線
 conn = st.connection("gsheets", type=GSheetsConnection)
