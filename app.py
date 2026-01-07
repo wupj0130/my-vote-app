@@ -5,7 +5,7 @@ from streamlit_gsheets import GSheetsConnection
 st.set_page_config(page_title="2026 影片決選投票系統", layout="wide")
 
 # 請在此貼上您的 Google 試算表網址
-URL = "您https://docs.google.com/spreadsheets/d/1FmxeSiHJYG7gvAMJeKYoBM0IUS7DCZorJ6h1In0LH44/edit?usp=sharing"
+URL = "https://docs.google.com/spreadsheets/d/1FmxeSiHJYG7gvAMJeKYoBM0IUS7DCZorJ6h1In0LH44/edit?usp=sharing"
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
@@ -49,4 +49,5 @@ with tab1:
             if st.button(f"投票給 {row['id']}", key=f"v_{row['id']}"):
                 save_record_to_cloud(current_user, row['id'], 'vote')
                 st.success("投票成功並已存至雲端！")
+
                 st.rerun()
